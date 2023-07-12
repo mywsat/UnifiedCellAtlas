@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="style/index.css" />
   </head>
   <body>
-    <div class="wrap">
+    <div class="banner" id="banner">
       <h1 align="center">Unified Cell Atlas</h1>
+    </div>
+    <div class="wrap">
+      <div class="section">
+        <p class="title">Overview</p>
+        <p class="cont">Profiling molecular features of all cells with their anatomical and functional attributes is essential for understanding the human body in health and diseases. Establishing cell atlases of major human organs based on single-cell omics and bioinformatics technology will make core infrastructures of life sciences and medicine, with significance comparable to the Human Genome Project. With the rapid development and popularization of single-cell sequencing technologies, tremendous amount of single-cell data has been released to the public domain. Our team is aiming to build unified cell atlases of major organs by collecting and re-organizing data from scattered publications with the help of innovative information technology and biotechnology. We believe that the project will activate the great potential in the massive scattered single-cell data in the public domain and create a new paradigm in future biomedical research.</p>
+      </div>
       <div class="section">
         <p class="title">Organ Cell Atlas</p>
         <ul class="cell-list">
@@ -53,7 +59,7 @@
         <p class="title">Ensemble Cell Atlas</p>
         <ul class="cell-list">
           <li>
-            <a href="http://eca.xglab.tech/#/index" target="_blank"> <img src="img/heca.png" alt="" /> <span>hECA 1.O </span> </a>
+            <a href="http://eca.xglab.tech/#/index" target="_blank"> <img src="img/heca.png" alt="" /> <span>hECA 1.0 </span> </a>
           </li>
         </ul>
       </div>
@@ -72,4 +78,20 @@
       </div>
     </div>
   </body>
+  <script>
+    function bgSizeSet() {
+      var banner = document.getElementById('banner')
+      // 获取屏幕宽度
+      var width = window.innerWidth
+      if (width < 930) {
+        banner.style.backgroundSize = '100% 100%'
+      } else {
+        banner.style.backgroundSize = '100%'
+      }
+    }
+    window.onresize = function () {
+      bgSizeSet()
+    }
+    bgSizeSet()
+  </script>
 </html>
